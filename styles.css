@@ -345,3 +345,169 @@ div.footer h6 {
     font-size: 1rem;
     padding-top: 6rem;
 }
+
+/* creating media query for web page responsive.*/
+
+@media (max-width: 767px) {
+    body {
+        overflow-x: hidden!important;
+    }
+
+    .nav-bar {
+        padding: 0.7rem 2rem!important;
+    }
+
+
+
+    ul.nav-link {
+        position: fixed;
+        flex-direction: column;
+        height: 40vh;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        transform: translateX(100%);
+        transition: all 500ms cubic-bezier(0, 1.88, 1, 1.22);
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .nav-toggl {
+        position: absolute;
+        z-index: 1000;
+        background: transparent;
+        right:2.5rem;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        padding: 1em;
+    }
+
+    .nav-toggl:focus {
+        display: none;
+    }
+
+    .active .nav-toggl {
+        position: fixed;
+    }
+
+    .active .nav-link {
+        transform: translateX(0);
+    }
+
+    /* the hamburger */
+
+    .ham--icon{
+        display: block;
+        position: relative;
+    }
+
+    .ham--icon,
+    .ham--icon::before,
+    .ham--icon::after {
+        width: 1.3em;
+        border-radius: 2px;
+        height: 2px;
+        background: #fff;
+    }
+
+    .ham--icon::before,
+    .ham--icon::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .ham--icon::before {
+        transform: translateY(-5px);
+    }
+
+    .ham--icon::after {
+        transform: translateY(5px);
+    }
+
+    .active .ham--icon {
+        background: transparent;
+        box-shadow: none;
+        transform: translateX(-6px);
+    }
+
+    .active .ham--icon::before {
+        transform: rotate(45deg) translate(10px, -10px);
+    }
+
+    .active .ham--icon::after {
+        transform: rotate(-45deg) translate(10px, 10px)
+    }
+
+    .hero-section {
+        padding: 10rem 4rem!important;
+        min-width: 212px!important;
+    }
+
+    .hero-content-heading h3 {
+        font-size: 24px!important;
+    }
+
+    .hero-content-heading p {
+        font-size: 14px!important;
+    }
+
+    .hero-content-btn {
+        padding-top: 1.5rem!important;
+    }
+
+    .hero-background {
+        padding: 0 auto;
+    }
+    .background {
+        height: auto!important;
+        padding: 7px 20px!important;
+    }
+
+    .hero-background-pos {
+        display: none;
+    }
+
+    .background p {
+        padding-left: 0!important;
+    }
+
+    .background h4 {
+        text-align: center;
+    }
+
+    .snapshot-team {
+        max-width: 375px;
+        margin: 0 auto;
+    }
+
+    .snapshot-box-content {
+        flex-wrap: wrap;
+    }
+
+    .snapshot-box-content .box1, .box3 {
+        margin: 10px auto!important;
+    }
+
+    div.footer-input {
+        flex-direction: column;
+        padding-top: 2rem;
+    }
+
+    .footer input {
+        width: 90%;
+        margin-right: 0!important;
+    }
+
+    input[type='text'] + input[type="email"] {
+        margin-top: 32px;
+    }
+
+    .footer-textarea textarea {
+        width: 90%;
+    }
+
+}
