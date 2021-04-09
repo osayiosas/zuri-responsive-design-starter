@@ -1,13 +1,6 @@
-const navToggl = document.querySelector('.nav-toggl');
+const btnToggler = document.getElementById('btn');
+const navLink = document.querySelector('.nav-links');
 
-const navLink= document.querySelectorAll('.nav__link');
-
-navToggl.addEventListener('click', () => {
-    document.body.classList.toggle('active');
+btnToggler.addEventListener('click', function () {
+ navLink.classList.toggle('active');
 });
-
-navLink.forEach(link => {
-    link.addEventListener('click', () => {
-        document.body.classList.remove('active');
-    })
-})
